@@ -6,12 +6,17 @@ import (
     "os"
     
     "github.com/gorilla/mux"
+    "github.com/lutrueba/microblog/middlew"
+    "github.com/lutrueba/microblog/routers"
     "github.com/rs/cors"
 )
  
 /*Manejadores: seteo mi puerto, el handler y pongo a escuchar al servidor*/
 func Manejadores(){
     router := mux.NewRouter()
+ 
+    router.HandleFunc("/registro", middlew.ChequeoBD(routers.Registro)).Methods("POST")
+ 
     PORT := os.Getenv("PORT")
     if PORT == ""{
         PORT = "8080"
@@ -19,3 +24,4 @@ func Manejadores(){
     handler := cors.AllowAll().Handler(router)
     log.Fatal(http.ListenAndServe(":"+PORT,handler))
 }
+
