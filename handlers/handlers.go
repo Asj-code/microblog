@@ -6,8 +6,8 @@ import (
     "os"
     
     "github.com/gorilla/mux"
-    "github.com/lutrueba/microblog/middlew"
-    "github.com/lutrueba/microblog/routers"
+    "github.com/asj-code/microblog/middlew"
+    "github.com/asj-code/microblog/routers"
     "github.com/rs/cors"
 )
  

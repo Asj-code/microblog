@@ -2,8 +2,8 @@ package main
  
 import (
     "log"
-    "github.com/lutrueba/microblog/handlers"
-    "github.com/lutrueba/microblog/bd"
+    "github.com/asj-code/microblog/handlers"
+    "github.com/asj-code/microblog/bd"
 )
 func main(){
     if bd.ChequeoConnection() == 0 {
