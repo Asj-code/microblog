@@ -15,3 +15,4 @@ func ValidoJWT (next http.HandlerFunc) http.HandlerFunc {
         next.ServeHTTP(w,r)
     }
 }
+
